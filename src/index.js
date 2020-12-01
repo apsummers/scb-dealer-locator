@@ -316,6 +316,7 @@ const SearchArea = styled.div`
     height: fit-content;
     box-sizing: content-box;
     width: 330px;
+    max-width: calc(100vw - (11px + ${(props) => props.theme.pagePaddingSide}));
   }
 `;
 
@@ -334,7 +335,7 @@ const OnlineArea = styled.div`
 const ListArea = styled.div`
   overflow-y: scroll;
   grid-area: list;
-  margin-bottom: 56px;
+  max-height: calc(100vh - ${props.dealerListBottomBuffer});
 
   @media screen and (max-width: ${(props) =>
       props.theme.sideBySideLayoutBreakpoint}) {
